@@ -27,4 +27,4 @@ const userProto = {
 
 User.prototype = userProto;
 
-const user1 = new User('Test');
+const user1 = new User();
