@@ -7,7 +7,6 @@ function User(firstName, lastName, email, age, isLoggedIn) {
   this.age = age;
   this.isLoggedIn = isLoggedIn;
 }
-
 const userProto = {
   getFullName: function () {
     return `${this.firstName} ${this.lastName}`;
