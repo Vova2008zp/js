@@ -12,13 +12,13 @@ const userProto = {
     return `${this.firstName} ${this.lastName}`;
   },
   logout: function () {
-    if ((isLoggedIn= 'exit')) {
+    if ((this.isLoggedIn= 'exit')) {
       return true;
     }
     return false;
   },
   login: function () {
-    if ((isLoggedIn = 'entry')) {
+    if ((this.isLoggedIn = 'entry')) {
       return true;
     }
     return false;
@@ -27,4 +27,4 @@ const userProto = {
 
 User.prototype = userProto;
 
-const user1 = new User();
+const user1 = new User('Test', 'Testenko');
