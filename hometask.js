@@ -7,24 +7,23 @@ function User(firstName, lastName, email, age, isLoggedIn) {
   this.age = age;
   this.isLoggedIn = isLoggedIn;
 }
+
 const userProto = {
   getFullName: function () {
     return `${this.firstName} ${this.lastName}`;
   },
   logout: function () {
-    if ((this.isLoggedIn= 'exit')) {
-      return true;
-    }
-    return false;
+    this.isLoggedIn = false;
+    return this.isLoggedIn;
   },
   login: function () {
-    if ((this.isLoggedIn = 'entry')) {
-      return true;
-    }
-    return false;
+    this.isLoggedIn = true;
+    return this.isLoggedIn;
   },
 };
 
 User.prototype = userProto;
 
-const user1 = new User('Test', 'Testenko');
+const user1 = new User('Test', 'Testenko', 'examle@gmail.com', 55);
+
+console.log(user1);
